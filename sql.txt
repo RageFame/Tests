@@ -1,0 +1,13 @@
+1)
+SELECT *
+FROM Customers
+JOIN Cities ON Customers.city_id = Cities.id
+
+2)
+SELECT Customers.id, Customers.Name, Cities.Name as City
+FROM Customers LEFT JOIN Cities ON Customers.city_id = Cities.id
+
+3)
+SELECT Cities.id, Cities.Name as City, Customers.Name
+FROM Customers RIGHT JOIN Cities ON Customers.city_id = Cities.id
+ORDER BY Cities.id
